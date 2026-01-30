@@ -9,7 +9,21 @@
 <body>
     <h1>Bienvenue dans mon superbe truc.</h1>
     <p>J'aime juste la blague entre Javascript et crypt.</p>
-    <p id="output" aria-live="polite">Regarde ici si tu veux voir des nombres bougés.</p>
+    <div role="tablist" aria-labelledby="tablist">
+        <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
+            <span class="focus">Capteur thermique</span>
+        </button>
+        <button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+            <span class="focus">Historique des températures enregistrées</span>
+        </button>
+    </div>
+    <div id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
+        <p id="output" aria-live="off">Regarde ici si tu veux voir des nombres bougés.</p>
+    </div>
+    <div id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2" class="isHidden">
+        <p id="historic" aria-live="polite">Voici l'historique des valeurs du capteur thermique :</p>
+    </div>
     <script src="sCrypt.js"></script>
+    <script src="tab.js"></script>
 </body>
 </html>

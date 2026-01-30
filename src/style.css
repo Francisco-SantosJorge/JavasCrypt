@@ -17,3 +17,7 @@
 #output {
     width: fit-content;
 }
+
+.isHidden {
+    display: none;
+}

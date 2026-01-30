@@ -16,6 +16,7 @@ const I_idInterval = setInterval(() => {
     }
     I_cpt++;
     const O_alert = document.createElement('p')
+    const O_historic = document.createElement('p')
     O_alert.id = "alert";
     O_alert.role = "alert";
     O_resultat.innerText = A_randomTable[I_cpt].toString();
@@ -37,4 +38,6 @@ const I_idInterval = setInterval(() => {
         O_resultat.before(O_alert);
     }
     if (I_cpt >= A_randomTable.length - 1) clearInterval(I_idInterval);
+    O_historic.innerText = A_randomTable[I_cpt].toString();
+    document.getElementById("historic").after(O_historic);
 }, 4000);
