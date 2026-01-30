@@ -13,3 +13,7 @@
 .red {
     border: 2px solid red;
 }
+
+#output {
+    width: fit-content;
+}
