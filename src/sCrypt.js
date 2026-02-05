@@ -15,8 +15,8 @@ const I_idInterval = setInterval(() => {
         O_toDelete.remove();
     }
     I_cpt++;
-    const O_alert = document.createElement('p')
-    const O_historic = document.createElement('li')
+    const O_alert = document.createElement('p');
+    const O_historic = document.createElement('li');
     const S_temperature = A_randomTable[I_cpt].toString() + 'ºC';
     O_alert.id = "alert";
     O_alert.role = "alert";
