@@ -16,10 +16,11 @@ const I_idInterval = setInterval(() => {
     }
     I_cpt++;
     const O_alert = document.createElement('p')
-    const O_historic = document.createElement('p')
+    const O_historic = document.createElement('li')
+    const S_temperature = A_randomTable[I_cpt].toString() + 'ºC';
     O_alert.id = "alert";
     O_alert.role = "alert";
-    O_resultat.innerText = A_randomTable[I_cpt].toString();
+    O_resultat.innerText = S_temperature;
     O_resultat.classList.remove("blue", "green", "orange", "red");
     if (A_randomTable[I_cpt] < 0) {
         O_resultat.classList.add("blue");
@@ -38,6 +39,6 @@ const I_idInterval = setInterval(() => {
         O_resultat.before(O_alert);
     }
     if (I_cpt >= A_randomTable.length - 1) clearInterval(I_idInterval);
-    O_historic.innerText = A_randomTable[I_cpt].toString();
-    document.getElementById("historic").after(O_historic);
+    O_historic.innerText = S_temperature;
+    document.getElementById("historic").append(O_historic);
 }, 4000);

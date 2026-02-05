@@ -21,3 +21,7 @@
 .isHidden {
     display: none;
 }
+
+.isActive {
+    background-color: #f00fff;
+}
